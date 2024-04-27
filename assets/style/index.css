@@ -30,7 +30,7 @@ body{
     top: 0;
     width: 100%;
     height: 80px;
-    background-color: #824D96;
+    background-color: deepskyblue;
     position: absolute;
 }
 
@@ -41,7 +41,7 @@ body{
     right: 0;
     width: 100vw;
     height: 10px;
-    background-color: #824D96;
+    background-color: deepskyblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,7 +87,7 @@ body{
 }
 
 .main-header1{
-    color: #824D96;
+    color: deepskyblue;
     position: absolute;
     top: 370px;
     bottom: 0;
@@ -102,7 +102,7 @@ body{
 }
 
 .main-header2{
-    color: #824D96;
+    color: deepskyblue;
     position: absolute;
     top: 470px;
     bottom: 0;
@@ -182,7 +182,7 @@ body{
     height: 50px;
     position: absolute;
     top: 0;
-    background-color: #824D96;
+    background-color: deepskyblue;
 }
 
 #search-label-part h4{
@@ -420,7 +420,7 @@ body{
     height: 50px;
     position: absolute;
     top: 0;
-    background-color: #824D96;
+    background-color: deepskyblue;
 }
 
 #item-search-label-part h4{
@@ -657,7 +657,7 @@ body{
     width: 500px;
     height: 80px;
     position: absolute;
-    background-color: #824D96;
+    background-color: deepskyblue;
 }
 
 #label-item-select{
@@ -666,7 +666,7 @@ body{
     width: 500px;
     height: 80px;
     position: absolute;
-    background-color: #824D96;
+    background-color: deepskyblue;
 }
 
 #label-invoice-detail h4{
@@ -1138,7 +1138,7 @@ body{
     }
 
     .main-header1{
-        color: #824D96;
+        color: deepskyblue;
         position: absolute;
         top: 600px;
         bottom: 0;
@@ -1153,7 +1153,7 @@ body{
     }
 
     .main-header2{
-        color: #824D96;
+        color: deepskyblue;
         position: absolute;
         top: 680px;
         bottom: 0;
@@ -1191,7 +1191,7 @@ body{
         height: 50px;
         position: absolute;
         top: 0;
-        background-color: #824D96;
+        background-color: deepskyblue;
     }
 
     #search-label-part h4{
@@ -1306,7 +1306,7 @@ body{
         height: 50px;
         position: absolute;
         top: 0;
-        background-color: #824D96;
+        background-color: deepskyblue;
     }
 
     #item-search-label-part h4{
