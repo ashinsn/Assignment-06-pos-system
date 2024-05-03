@@ -9,6 +9,7 @@
     list-style: none;
     outline: none;
     scroll-behavior: smooth;
+
 }
 
 :root{
@@ -23,6 +24,7 @@ html{
 
 body{
     overflow: hidden;
+
 }
 
 
@@ -63,9 +65,9 @@ body{
 .main-img{
     top: 240px;
     position: absolute;
-    width: 4000px;
-    height: 3800px;
-    left: 200px;
+    width: 3000px;
+    height: 3000px;
+    left: 0px;
 }
 
 .Button{
@@ -119,7 +121,7 @@ body{
     top: 580px;
     left: 900px;
     font-family: Ubuntu;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     position: absolute;
 }
@@ -645,7 +647,7 @@ body{
 #order-detail{
     top: 150px;
     left: 1220px;
-    width: 500px;
+    width: 50px;
     height: 1000px;
     position: absolute;
     background-color: #F0CCFD;
