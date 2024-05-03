@@ -2,9 +2,387 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ItemManage</title>
+    <link rel="stylesheet" href="item.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+<section>
+    <div id="item-part">
+        <div id="item-label-part">
+            <div>
+                <i class="fa-solid fa-business-time img-item"></i>
+            </div>
+            <h2 id="item">ITEM MANAGEMENT</h2>
+        </div>
+
+        <button type="button" class="btn btn-outline-danger" id="button-add-new-item"  data-bs-toggle="modal" data-bs-target="#addItemModal">+ Add new item</button>
+        <button type="button" class="btn btn-outline-secondary" id="button-view-item"  data-bs-toggle="modal" data-bs-target="#addItemModal">View all item</button>
+
+
+        <div id="item-search-part">
+            <div id="item-search-label-part">
+                <h4>search items</h4>
+            </div>
+            <input class="form-control item-search-text-field" type="text" placeholder="Input Item code/item name here..." aria-label="readonly input example" readonly>
+
+            <button type="button" class="btn btn-danger btn-item-search"  data-bs-toggle="modal" data-bs-target="#ItemModal">search</button>
+
+            <select class="form-select form-select-lg mb-3 customer-name-box" aria-label="Large select example">
+                <option selected>Item code</option>
+                <option value="1">I-001</option>
+                <option value="2">I-002</option>
+                <option value="3">I-003</option>
+                <option value="3">I-004</option>
+            </select>
+        </div>
+
+        <table class="table caption-top tbl-customer">
+            <caption id="item-table-topic">List of items</caption>
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item name</th>
+                <th scope="col">Item price</th>
+                <th scope="col">Item quantity</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>I-001</td>
+                <td>Cake</td>
+                <td>850.00</td>
+                <td>12</td>
+
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>I-002</td>
+                <td>Brownies</td>
+                <td>300.00</td>
+                <td>25</td>
+
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>I-003</td>
+                <td>Biscuits</td>
+                <td>245.00</td>
+                <td>10</td>
+
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!--add Item modal-->
+<div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel addItemLabel">New Item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body item-card">
+                <!--item add form-->
+                <form>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemCode">Item code</label>
+                        <input type="text" class="form-control input-code" id="formGroupExampleInputModalCode" placeholder="Enter customer ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemName">Item Name</label>
+                        <input type="text" class="form-control input-item" id="formGroupExampleInputModalItem" placeholder="Enter Item Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemPrice">Item Price</label>
+                        <input type="text" class="form-control input-price" id="formGroupExampleInputModalPrice" placeholder="Enter item price">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2Modal" class="form-label label-ItemQty">Item Quantity</label>
+                        <input type="number" class="form-control input-qty" id="formGroupExampleInput2ModalQty" placeholder="Enter Quantity">
+                    </div>
+
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-item">Close</button>
+                <button type="button" class="btn btn-primary" id="item-save">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--open model from item search-->
+<div class="modal fade" id="ItemModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel addSearchItemLabel">Item Form</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body item-card">
+                <!--item add form-->
+                <form>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemCode">Item code</label>
+                        <input type="text" class="form-control input-code" id="formGroupExampleInputModalItemCode" placeholder="Enter customer ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemName">Item Name</label>
+                        <input type="text" class="form-control input-item" id="formGroupExampleInputModalItemName" placeholder="Enter Item Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemPrice">Item Price</label>
+                        <input type="text" class="form-control input-price" id="formGroupExampleInputModalItemPrice" placeholder="Enter item price">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2Modal" class="form-label label-ItemQty">Item Quantity</label>
+                        <input type="number" class="form-control input-qty" id="formGroupExampleInput2ModalItemQty" placeholder="Enter Quantity">
+                    </div>
+
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="item-close">Close</button>
+                <button type="button" class="btn btn-warning" id="item-update">update</button>
+                <button type="button" class="btn btn-primary" id="item-delete">delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section >
+    <div class="card" id="order-part">
+        <div id="order-label-part">
+            <div>
+                <i class="fa-solid fa-cart-shopping img-orders"></i>
+            </div>
+            <h2 id="orders">PLACE ORDER</h2>
+        </div>
+
+        <div class="card" id="invoice-details">
+            <div id="label-invoice-detail">
+                <h4>Invoice Detail</h4>
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-OrderId">Order ID</label>
+                <input type="text" class="form-control input-OrderId" id="formGroupExampleInputModalOrderID" placeholder="Order ID">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-orderDate">Order Date</label>
+                <input type="date" class="form-control input-Date" id="formGroupExampleInputModalOrderDate">
+            </div>
+
+            <div>
+                <label for="exampleFormControlTextareaID" class="form-label label-load-customerId">Customer ID</label>
+                <select class="form-select load-customer-Id" aria-label="Default select example" id="exampleFormControlTextareaID">
+                    <option selected>Select the Customer ID</option>
+                    <option value="1">C-001</option>
+                    <option value="2">C-002</option>
+                    <option value="3">C-003</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput2Modal" class="form-label label-setName">Customer Name</label>
+                <input type="text" class="form-control set-Cname" id="formGroupExampleInput2ModalSetName" placeholder="name" >
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-setAddress">Customer Address</label>
+                <input type="text" class="form-control set-customerAddress" id="formGroupExampleInputModalLoadCustomer" placeholder="address">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-setTel">Phone Number</label>
+                <input type="tel" class="form-control set-customerTel" id="formGroupExampleInputModalLoadCustomerTel" placeholder="07X XXXXXXX">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-setCSalary">Salary</label>
+                <input type="tel" class="form-control set-cSalary" id="formGroupExampleInputModalLoadCSalary" placeholder="">
+            </div>
+
+        </div>
+
+        <div class="card" id="select-item">
+            <div id="label-item-select">
+                <h4>Item select</h4>
+            </div>
+
+            <div>
+                <label for="exampleFormControlTextareaItemCode" class="form-label label-load-itemCode">Item Code</label>
+                <select class="form-select load-Item-code" aria-label="Default select example" id="exampleFormControlTextareaItemCode">
+                    <option selected>Select the Item Code</option>
+                    <option value="1">I-001</option>
+                    <option value="2">I-002</option>
+                    <option value="3">I-003</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput2Modal" class="form-label label-setItemName">Item Name</label>
+                <input type="text" class="form-control set-item-name" id="formGroupExampleInput2ModalSetItemName" placeholder="Item name" >
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-setItemPrice">Item price</label>
+                <input type="text" class="form-control set-Item-price" id="formGroupExampleInputModalSetPrice" placeholder="price">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2Modal" class="form-label label-setItemQty">Item Quantity</label>
+                <input type="number" class="form-control set-qty" id="formGroupExampleInput2ModalSetItemQty" placeholder="Quantity">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2Modal" class="form-label label-setOrderQty">Order Quantity</label>
+                <input type="number" class="form-control set-OrderQty" id="formGroupExampleInput2ModalOrderQty" placeholder="Enter Order Quantity">
+            </div>
+            <button type="button" class="btn btn-warning add-item-button">Add Item</button>
+        </div>
+
+        <div class="card" id="order-detail">
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-setTotalPrice">Total Price :</label>
+                <input type="text" class="form-control input-TotalPrice" id="formGroupExampleInputModalTotalPrice" placeholder="Total price">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-setSubTotalPrice">Sub Total Price :</label>
+                <input type="text" class="form-control input-SubTotalPrice" id="formGroupExampleInputModalSubTotalPrice" placeholder="sub Total price">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-setCash">Cash</label>
+                <input type="text" class="form-control input-cash" id="formGroupExampleInputModalCash" placeholder="cash">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-setDiscount">Discount</label>
+                <input type="text" class="form-control input-discount" id="formGroupExampleInputModalDiscount" placeholder="discount">
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInputModal" class="form-label label-setBalance">Balance</label>
+                <input type="text" class="form-control input-balance" id="formGroupExampleInputModalBalance" placeholder="balance">
+            </div>
+
+            <div id="purchase">
+                <button type="button" class="btn btn-success purchase-button"><i class="fa-brands fa-shopify"></i>Purchase</button>
+            </div>
+
+        </div>
+
+        <table class="table caption-top tbl-order">
+            <caption id="order-table-topic">Select Item List</caption>
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Item Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
 
 </body>
 </html>
