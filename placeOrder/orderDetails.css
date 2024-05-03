@@ -1,0 +1,481 @@
+#order-part{
+    width: 1800px;
+    height: 1700px;
+    background-color: #F7E6FE;
+    top: 4000px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+#order-label-part{
+    width: 1800px;
+    height: 100px;
+    background-image: linear-gradient(to right, #262A56,lightskyblue);
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+#order-label-part h2{
+    color: white;
+    position: absolute;
+    left: 200px;
+    top: 33px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.img-orders{
+    color: white;
+    font-size: 30px;
+    top: 35px;
+    left: 150px;
+    position: absolute;
+}
+
+#invoice-details{
+    top: 150px;
+    left: 80px;
+    width: 500px;
+    height: 1000px;
+    position: absolute;
+    background-color: white;
+}
+
+#select-item{
+    top: 150px;
+    left: 650px;
+    width: 500px;
+    height: 1000px;
+    position: absolute;
+    background-color: white;
+}
+
+#order-detail{
+    top: 150px;
+    left: 1220px;
+    width: 50px;
+    height: 1000px;
+    position: absolute;
+    background-color: #F0CCFD;
+}
+
+#label-invoice-detail{
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 80px;
+    position: absolute;
+    background-color: deepskyblue;
+}
+
+#label-item-select{
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 80px;
+    position: absolute;
+    background-color: deepskyblue;
+}
+
+#label-invoice-detail h4{
+    color: white;
+    top: 22px;
+    left: 180px;
+    position: absolute;
+}
+
+#label-item-select h4{
+    color: white;
+    top: 22px;
+    left: 180px;
+    position: absolute;
+}
+
+.label-OrderId{
+    top: 120px;
+    position: absolute;
+    left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-orderDate{
+    top: 250px;
+    position: absolute;
+    font-size: 18px;
+    left: 35px;
+    font-weight: bold;
+}
+
+.label-load-customerId{
+    top: 370px;
+    position: absolute;
+    font-size: 18px;
+    left: 35px;
+    font-weight: bold;
+}
+
+.load-customer-Id{
+    top: 400px;
+    position: absolute;
+    left: 35px;
+    height: 50px;
+    width: 250px;
+    border: 2px solid black;
+}
+
+.label-setName{
+    top: 490px;
+    position: absolute;
+    left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-setTel{
+    top: 735px;
+    position: absolute;
+    left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-setCSalary{
+    top: 850px;
+    position: absolute;
+    left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-setAddress{
+    top: 610px;
+    position: absolute;
+    left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.set-customerAddress{
+    top: 640px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.input-OrderId{
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.input-Date{
+    top: 280px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.set-cSalary{
+    top: 880px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.set-customerTel{
+    top: 765px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.set-Cname{
+    top: 520px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.label-load-itemCode{
+    top: 120px;
+    left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.label-setItemName{
+    top: 250px;
+    left: 35px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-setItemPrice{
+    top: 370px;
+    left: 35px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.load-Item-code{
+    top: 150px;
+    position: absolute;
+    left: 35px;
+    height: 50px;
+    width: 250px;
+    border: 2px solid black;
+}
+
+.set-item-name{
+    top: 280px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.set-Item-price{
+    top: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.label-setItemQty{
+    top: 490px;
+    left: 35px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-setOrderQty{
+    top: 735px;
+    left: 35px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff253a;
+}
+
+.set-qty{
+    top: 520px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.set-OrderQty{
+    top: 765px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.add-item-button{
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    top: 880px;
+    right: 0;
+    left: 0;
+    font-size: 18px;
+    margin: auto;
+    position: absolute;
+    border-radius: 25px;
+}
+
+.add-item-button:hover{
+    color: white;
+    background-color: blue;
+}
+
+.label-setTotalPrice{
+    font-weight: bold;
+    font-size: 42px;
+    top: 100px;
+    left: 30px;
+    position: absolute;
+    color: #3742FA;
+}
+
+.label-setSubTotalPrice{
+    font-weight: bold;
+    font-size: 42px;
+    top: 240px;
+    left: 30px;
+    position: absolute;
+    color: #E51824;
+}
+
+.input-TotalPrice{
+    top: 160px;
+    position: absolute;
+    left: 30px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: #F0CCFD;
+    border-radius: 0;
+}
+
+.input-SubTotalPrice{
+    top: 300px;
+    position: absolute;
+    left: 30px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: #F0CCFD;
+    border-radius: 0;
+}
+
+.label-setCash{
+    top: 400px;
+    left: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+
+}
+
+.label-setDiscount{
+    top: 530px;
+    left: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+}
+
+.label-setBalance{
+    top: 660px;
+    left: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+}
+
+.input-cash{
+    top: 430px;
+    position: absolute;
+    left: 30px;
+    width: 430px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: #F0CCFD;
+    border-radius: 0;
+}
+
+.input-discount{
+    top: 560px;
+    position: absolute;
+    left: 30px;
+    width: 430px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: #F0CCFD;
+    border-radius: 0;
+}
+
+.input-balance{
+    top: 690px;
+    position: absolute;
+    left: 30px;
+    width: 430px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: #F0CCFD;
+    border-radius: 0;
+}
+
+.purchase-button{
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    top: 880px;
+    right: 0;
+    left: 0;
+    font-size: 18px;
+    margin: auto;
+    position: absolute;
+    border-radius: 25px;
+}
+
+#purchase i{
+    color: white;
+    font-size: 19px;
+}
+
+.purchase-button:hover{
+    background-color: #3742FA;
+}
+
+.tbl-order{
+    top: 1200px;
+    width: 1500px;
+    height: 220px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border: 2px solid black;
+}
+
+#order-table-topic{
+    font-weight: 600;
+    font-size: 20px;
+    color: blue;
+}
